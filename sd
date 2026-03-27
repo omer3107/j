@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>...</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      font-size: 24px;
+      font-family: Arial;
+      cursor: pointer;
+    }
+    img {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      display: none;
+    }
+  </style>
+</head>
+<body onclick="go()">
+
+<div id="text">לחץ כאן</div>
+<img id="img" src="https://i.imgur.com/8Km9tLL.jpg">
+
+<audio id="sound">
+  <source src="https://www.myinstants.com/media/sounds/scream.mp3">
+</audio>
+
+<script>
+function go() {
+  document.documentElement.requestFullscreen?.();
+  document.getElementById('text').style.display = 'none';
+  document.getElementById('img').style.display = 'block';
+  document.getElementById('sound').play();
+}
+</script>
+
+</body>
+</html>
